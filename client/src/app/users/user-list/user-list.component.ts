@@ -6,12 +6,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { UserFormComponent } from '../user-form/user-form.component';
 import { MatDialog } from '@angular/material/dialog';
 import { CoreService } from '../../core/core.service';
+import { GeneratePdfButtonComponent } from '../generate-pdf-button/generate-pdf-button.component';
+import { ViewPdfButtonComponent } from '../view-pdf-button/view-pdf-button.component';
 
 
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [MatTableModule, MatIconModule],
+  imports: [MatTableModule, MatIconModule,GeneratePdfButtonComponent,ViewPdfButtonComponent],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.css',
 })
