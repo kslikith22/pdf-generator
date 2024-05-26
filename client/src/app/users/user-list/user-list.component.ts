@@ -37,6 +37,7 @@ export class UserListComponent implements OnInit {
     'address',
     'actions',
     'pdf',
+    'view pdf'
   ];
   dataSource = new MatTableDataSource<any>();
 
@@ -76,6 +77,18 @@ export class UserListComponent implements OnInit {
         link.click();
         document.body.removeChild(link);
         this._coreService.openSnackBar("Pdf file generated for id "+id,"Done!")
+      },
+      error: (err: any) => {
+        console.log(err);
+      },
+    });
+  }
+
+  viewPdfById(id: string) {
+    this._userService.generatePdf(id).subscribe({
+      next: (res: Blob) => {
+        const url = window.URL.createObjectURL(res);
+        window.open(url); // Open PDF in a new tab
       },
       error: (err: any) => {
         console.log(err);
