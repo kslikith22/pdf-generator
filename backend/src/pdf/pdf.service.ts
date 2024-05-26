@@ -19,7 +19,11 @@ export class PdfService {
 
     doc.on('data', buffers.push.bind(buffers));
     doc.on('end', () => {});
-
+    doc.fontSize(30).text(
+      `QBH Solution Private Limited
+    `,
+      { align: 'center' },
+    );
     doc.fontSize(25).text(`User Details`, { align: 'center' });
     doc.moveDown();
     doc.fontSize(14).text(`Name: ${user.name}`);
