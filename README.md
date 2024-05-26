@@ -3,10 +3,11 @@
 ###.envs
 create a .env file in backend directory (backend/.env)
 
+
 ```
 .env variable
 
-MONGO_URL=your-mongo-url
+MONGO_URL=your-mongoDb-connection-url
 ```
 
 To run server
