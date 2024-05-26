@@ -1,4 +1,3 @@
-// generate-pdf-button.component.ts
 import { Component, Input } from '@angular/core';
 import { CoreService } from '../../core/core.service';
 import { UsersService } from '../../services/users.service';
